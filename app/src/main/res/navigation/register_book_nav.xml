@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register_book_nav"
+    app:startDestination="@id/registerBookIsbnFragment">
+
+    <fragment
+        android:id="@+id/registerBookIsbnFragment"
+        android:name="br.com.kyberbooks.ui.registerbook.fragments.RegisterBookIsbnFragment"
+        android:label="fragment_register_isbn"
+        tools:layout="@layout/fragment_register_isbn">
+        <action
+            android:id="@+id/action_registerBookIsbnFragment_to_registerBookNameFragment"
+            app:destination="@id/registerBookNameFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerBookNameFragment"
+        android:name="br.com.kyberbooks.ui.registerbook.fragments.RegisterBookNameFragment"
+        android:label="RegisterBookNameFragment" >
+        <action
+            android:id="@+id/action_registerBookNameFragment_to_registerBookCoverFragment"
+            app:destination="@id/registerBookCoverFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerBookCoverFragment"
+        android:name="br.com.kyberbooks.ui.registerbook.fragments.RegisterBookCoverFragment"
+        android:label="RegisterBookCoverFragment" />
+</navigation>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "319747727443",
+    "project_id": "kyberbooks",
+    "storage_bucket": "kyberbooks.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:319747727443:android:78856f11aae28995b1e6a6",
+        "android_client_info": {
+          "package_name": "br.com.kyberbooks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "319747727443-3nqk9l5o3ntdqp79iv1uudf6h5mcatme.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf-WZ5UrPrTEFKeQ8Z4v5lxb0ibbFDXHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "319747727443-3nqk9l5o3ntdqp79iv1uudf6h5mcatme.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
