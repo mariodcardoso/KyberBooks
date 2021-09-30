@@ -1,15 +1,21 @@
 package br.com.kyberbooks.data
 
+import android.net.Uri
+import androidx.core.net.toUri
 import br.com.kyberbooks.domain.model.Book
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.FirebaseStorage
+import java.util.*
 import javax.inject.Inject
 import kotlin.coroutines.suspendCoroutine
 
 class FirebaseBookDataSource @Inject constructor(
-    firebaseFirestore: FirebaseFirestore
+    firebaseFirestore: FirebaseFirestore,
+    firebaseStorage: FirebaseStorage
 ) : BookDataSource {
 
     private val documentReference = firebaseFirestore.document("data/kyber/")
+    private val storage = firebaseStorage.reference
 
     override suspend fun createBook(book: Book): Book {
         return suspendCoroutine { continuation ->
@@ -36,6 +42,21 @@ class FirebaseBookDataSource @Inject constructor(
                 }
                 .addOnFailureListener { exception -> continuation.resumeWith(Result.failure(exception)) }
 
+        }
+    }
+
+    override suspend fun uploadBookCover(uri: String): String {
+        return suspendCoroutine { continuation ->
+            val randomKey = UUID.randomUUID()
+            val childReference = storage.child("images/kyber/$randomKey")
+
+            childReference.putFile(uri.toUri())
+                .addOnSuccessListener { taskSnapshot ->
+                    taskSnapshot.storage.downloadUrl.addOnSuccessListener { uri ->
+                        continuation.resumeWith(Result.success(uri.toString()))
+                    }
+                }
+                .addOnFailureListener { exception -> continuation.resumeWith(Result.failure(exception)) }
         }
     }
 }

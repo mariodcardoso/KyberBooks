@@ -8,4 +8,6 @@ interface BookDataSource {
 
     suspend fun getBook(isbn: String): Book
 
+    suspend fun uploadBookCover(uri: String): String
+
 }

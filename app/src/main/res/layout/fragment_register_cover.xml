@@ -7,24 +7,20 @@
     android:padding="20dp"
     tools:context=".ui.registerbook.fragments.RegisterBookIsbnFragment">
 
-    <com.google.android.material.textfield.TextInputLayout
+    <ImageView
+        android:id="@+id/img_book_cover"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/btn_register"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edt_isbn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Adicione uma imagem" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_height="0dp"
+        android:layout_marginVertical="20dp"
+        android:background="#CCC"
+        app:layout_constraintBottom_toTopOf="@id/btn_back"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
         android:text="Cadastrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/btn_back"
@@ -34,7 +30,7 @@
         android:id="@+id/btn_back"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
         android:text="Voltar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

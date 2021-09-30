@@ -6,8 +6,5 @@ import javax.inject.Inject
 
 class GetBookUseCaseImpl @Inject constructor(private val bookRepository: BookRepository) : GetBookUseCase {
 
-    override suspend fun invoke(isbn: String): Book {
-        return bookRepository.getBook(isbn)
-
-    }
+    override suspend fun invoke(isbn: String): Book = bookRepository.getBook(isbn)
 }

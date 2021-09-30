@@ -1,4 +1,4 @@
-package br.com.kyberbooks
+package br.com.kyberbooks.ui.dashboard.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

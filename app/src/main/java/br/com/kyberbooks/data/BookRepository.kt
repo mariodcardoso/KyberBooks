@@ -9,4 +9,6 @@ class BookRepository @Inject constructor(private val dataSource: BookDataSource)
 
     suspend fun getBook(isbn: String) = dataSource.getBook(isbn)
 
+    suspend fun uploadBookCover(uri: String) = dataSource.uploadBookCover(uri)
+
 }

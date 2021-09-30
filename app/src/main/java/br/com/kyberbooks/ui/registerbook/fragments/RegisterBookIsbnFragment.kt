@@ -32,9 +32,12 @@ class RegisterBookIsbnFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnNext.setOnClickListener {
-            viewModel.onNextButtonClick("123456789", binding.javaClass.simpleName)
-            findNavController().navigate(R.id.action_registerBookIsbnFragment_to_registerBookNameFragment)
+        with(binding) {
+            btnNext.setOnClickListener {
+                viewModel.onNextButtonClick(edtIsbn.text.toString(), binding.javaClass.simpleName)
+                findNavController().navigate(R.id.action_registerBookIsbnFragment_to_registerBookNameFragment)
+            }
         }
+
     }
 }

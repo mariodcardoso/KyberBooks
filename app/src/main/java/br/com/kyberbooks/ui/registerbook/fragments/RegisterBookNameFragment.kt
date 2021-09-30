@@ -26,13 +26,13 @@ class RegisterBookNameFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnNext.setOnClickListener {
-
-            activityViewModel.onNextButtonClick("Mário", binding.javaClass.simpleName)
-            findNavController().navigate(R.id.action_registerBookNameFragment_to_registerBookCoverFragment)
-
-
+        with(binding) {
+            binding.btnNext.setOnClickListener {
+                activityViewModel.onNextButtonClick(edtBookName.text.toString(), binding.javaClass.simpleName)
+                findNavController().navigate(R.id.action_registerBookNameFragment_to_registerBookCoverFragment)
+            }
         }
+
     }
 
 }
