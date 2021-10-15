@@ -22,23 +22,24 @@
             android:hint="Qual é o ISBN?" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
+    <br.com.kyberbooks.components.KyberButton
         android:id="@+id/btn_next"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
         android:text="Próximo"
+        app:buttonType="contained"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/btn_back"
         app:layout_constraintRight_toRightOf="parent" />
 
-    <Button
+    <br.com.kyberbooks.components.KyberButton
         android:id="@+id/btn_back"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
         android:text="Voltar"
-        android:background="@color/white"
+        app:buttonType="outlined"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/btn_next" />
