@@ -29,7 +29,7 @@ class DashboardActivity : AppCompatActivity() {
         }
 
         Glide.with(this)
-            .load(R.drawable.book_cover_placeholder)
+            .load(R.drawable.img_profile_placeholder)
             .apply(RequestOptions.circleCropTransform())
             .into(binding.imgUser)
     }

@@ -20,8 +20,8 @@
 
                 <gradient
                     android:centerY="0.5"
-                    android:endColor="#87CEEB"
-                    android:startColor="#9400D3" />
+                    android:endColor="@color/purple_100"
+                    android:startColor="@color/purple_700" />
 
                 <corners android:radius="10dp" />
             </shape>
