@@ -1,6 +1,7 @@
 package br.com.kyberbooks.data
 
 import br.com.kyberbooks.domain.model.Book
+import br.com.kyberbooks.domain.model.BookReadProgress
 
 interface BookDataSource {
 
@@ -9,5 +10,7 @@ interface BookDataSource {
     suspend fun getBook(isbn: String): Book
 
     suspend fun uploadBookCover(uri: String): String
+
+    suspend fun getBookReadProgress(): BookReadProgress
 
 }

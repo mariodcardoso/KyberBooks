@@ -1,8 +1,8 @@
 package br.com.kyberbooks.data
 
-import android.net.Uri
 import androidx.core.net.toUri
 import br.com.kyberbooks.domain.model.Book
+import br.com.kyberbooks.domain.model.BookReadProgress
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import java.util.*
@@ -55,6 +55,19 @@ class FirebaseBookDataSource @Inject constructor(
                     taskSnapshot.storage.downloadUrl.addOnSuccessListener { uri ->
                         continuation.resumeWith(Result.success(uri.toString()))
                     }
+                }
+                .addOnFailureListener { exception -> continuation.resumeWith(Result.failure(exception)) }
+        }
+    }
+
+    override suspend fun getBookReadProgress(): BookReadProgress {
+        return suspendCoroutine { continuation ->
+            documentReference
+                .collection("read_progress")
+                .get()
+                .addOnSuccessListener { snapshot ->
+                    val readBookProgress = snapshot.documents[0].toObject(BookReadProgress::class.java)
+                    readBookProgress?.let { continuation.resumeWith(Result.success(readBookProgress)) }
                 }
                 .addOnFailureListener { exception -> continuation.resumeWith(Result.failure(exception)) }
         }

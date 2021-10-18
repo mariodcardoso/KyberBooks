@@ -2,25 +2,24 @@ package br.com.kyberbooks.ui.dashboard.activities
 
 import android.animation.ValueAnimator
 import android.os.Bundle
-import android.transition.TransitionManager
-import android.util.Log
-import android.view.View
 import android.view.animation.LinearInterpolator
-import androidx.appcompat.app.AppCompatActivity
+import androidx.activity.viewModels
 import br.com.kyberbooks.R
+import br.com.kyberbooks.base.BaseActivity
 import br.com.kyberbooks.databinding.ActivityDashboardBinding
 import br.com.kyberbooks.ui.bookdetail.BookDetailsActivity
+import br.com.kyberbooks.ui.dashboard.viewmodel.DashboardViewModel
 import br.com.kyberbooks.ui.registerbook.activities.RegisterBookActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import dagger.hilt.android.AndroidEntryPoint
-import java.math.BigDecimal
-import java.math.BigInteger
 
 @AndroidEntryPoint
-class DashboardActivity : AppCompatActivity() {
+class DashboardActivity : BaseActivity() {
 
     private val binding by lazy { ActivityDashboardBinding.inflate(layoutInflater) }
+
+    private val viewModel by viewModels<DashboardViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,12 +28,8 @@ class DashboardActivity : AppCompatActivity() {
         setupViews()
 
         with(binding) {
-            btnRegisterBook.setOnClickListener {
-                startActivity(RegisterBookActivity.getStartIntent(this@DashboardActivity))
-            }
-            ctnBookProgress.setOnClickListener {
-                startActivity(BookDetailsActivity.getStartIntent(this@DashboardActivity))
-            }
+            btnRegisterBook.setOnClickListener { startActivity(RegisterBookActivity.getStartIntent(this@DashboardActivity)) }
+            ctnBookProgress.setOnClickListener { startActivity(BookDetailsActivity.getStartIntent(this@DashboardActivity)) }
         }
 
         Glide.with(this)
@@ -48,7 +43,6 @@ class DashboardActivity : AppCompatActivity() {
     }
 
     private fun setupProgressBarAnimation() {
-
         with(binding) {
             ValueAnimator.ofInt(0, 375).apply {
                 addUpdateListener {
@@ -63,11 +57,6 @@ class DashboardActivity : AppCompatActivity() {
                 duration = 2000
                 start()
             }
-
-
         }
-
-
     }
-
 }

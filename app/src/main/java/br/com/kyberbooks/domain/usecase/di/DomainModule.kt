@@ -4,6 +4,8 @@ import br.com.kyberbooks.domain.usecase.books.CreateBookUseCase
 import br.com.kyberbooks.domain.usecase.books.CreateBookUseCaseImpl
 import br.com.kyberbooks.domain.usecase.books.GetBookUseCase
 import br.com.kyberbooks.domain.usecase.books.GetBookUseCaseImpl
+import br.com.kyberbooks.domain.usecase.books.GetReadProgressUseCase
+import br.com.kyberbooks.domain.usecase.books.GetReadProgressUseCaseImpl
 import br.com.kyberbooks.domain.usecase.books.UploadBookCoverUseCase
 import br.com.kyberbooks.domain.usecase.books.UploadBookCoverUseCaseImpl
 import dagger.Binds
@@ -23,4 +25,7 @@ interface DomainModule {
 
     @Binds
     fun bindUploadBookCoverUseCase(useCase: UploadBookCoverUseCaseImpl): UploadBookCoverUseCase
+
+    @Binds
+    fun bindGetReadProgressUseCase(useCase: GetReadProgressUseCaseImpl): GetReadProgressUseCase
 }
