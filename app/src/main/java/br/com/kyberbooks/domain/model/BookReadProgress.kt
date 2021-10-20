@@ -7,19 +7,28 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class BookReadProgress(
     @get:PropertyName("isbn")
-    val isbn: String = "",
+    @set:PropertyName("isbn")
+    var isbn: String = "",
     @get:PropertyName("book_name")
-    val bookName: String = "",
+    @set:PropertyName("book_name")
+    var bookName: String = "",
     @get:PropertyName("total_pages")
-    val totalPages: Int = 0,
+    @set:PropertyName("total_pages")
+    var totalPages: Int = 0,
     @get:PropertyName("cover_book")
-    val coverBook: String? = "",
+    @set:PropertyName("cover_book")
+    var bookCover: String = "",
     @get:PropertyName("read_progress")
-    val read_progress: List<ProgressRegister> = emptyList()
+    @set:PropertyName("read_progress")
+    var readProgress: List<ProgressRegister> = emptyList()
 ) : Parcelable
 
 @Parcelize
 data class ProgressRegister(
-    val pages_read: Int = 0,
-    val date_read: String = ""
+    @get:PropertyName("pages_read")
+    @set:PropertyName("pages_read")
+    var pages_read: Int = 0,
+    @get:PropertyName("date_read")
+    @set:PropertyName("date_read")
+    var date_read: String = ""
 ) : Parcelable

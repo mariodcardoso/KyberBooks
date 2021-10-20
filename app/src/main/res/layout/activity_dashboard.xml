@@ -47,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Mário Dias Cardoso Neto"
-            android:textColor="@color/white"
+            android:textColor="@color/base_white"
             android:textSize="@dimen/h6"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/txt_user_username"
@@ -60,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="\@TheMrDays"
-            android:textColor="@color/white"
+            android:textColor="@color/base_white"
             android:textSize="@dimen/bod2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="@id/txt_user_name"
@@ -77,14 +77,13 @@
         android:elevation="10dp"
         android:padding="20dp"
         android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@id/ctn_user"
-        tools:visibility="visible">
+        app:layout_constraintTop_toBottomOf="@id/ctn_user">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@id/img_book_cover"
             android:layout_width="80dp"
             android:layout_height="120dp"
-            android:background="@color/black"
+            android:background="@color/base_black"
             android:src="@drawable/book_cover_placeholder"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -97,23 +96,23 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_marginLeft="8dp"
-            android:progress="75"
             android:progressDrawable="@drawable/round_progress_bar"
             app:layout_constraintBottom_toTopOf="@id/txt_absolut_read_pages"
             app:layout_constraintLeft_toRightOf="@id/img_book_cover"
             app:layout_constraintRight_toLeftOf="@id/txt_book_title"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed" />
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:progress="75" />
 
         <TextView
             android:id="@+id/txt_absolut_read_pages"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="375 / 500"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="@id/pgb_read_progress"
             app:layout_constraintRight_toRightOf="@id/pgb_read_progress"
-            app:layout_constraintTop_toBottomOf="@id/pgb_read_progress" />
+            app:layout_constraintTop_toBottomOf="@id/pgb_read_progress"
+            tools:text="375 / 500" />
 
         <TextView
             android:id="@+id/txt_percent_read_pages"
@@ -148,7 +147,7 @@
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/purple_700"
         android:src="@drawable/ic_menu_book"
-        android:tint="@color/white"
+        android:tint="@color/base_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />

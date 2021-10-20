@@ -1,29 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="purple_50">#eee7f4</color>
-    <color name="purple_100">#d3c4e5</color>
-    <color name="purple_200">#b69ed5</color>
-    <color name="purple_300">#9a76c4</color>
-    <color name="purple_400">#8558b7</color>
-    <color name="purple_500">#713baa</color>
-    <color name="purple_600">#6836a4</color>
-    <color name="purple_700">#5d2e9b</color>
+    <!-- Transparency - Design System -->
+    <color name="transparent">#00FFFFFF</color>
+    <color name="black_75">#C0000000</color>
+    <color name="black_50">#80000000</color>
+    <color name="black_25">#40000000</color>
+    <color name="black_10">#19000000</color>
+    <color name="white_75">#C0ffffff</color>
+    <color name="white_50">#80ffffff</color>
+    <color name="white_25">#40ffffff</color>
+    <color name="white_10">#19ffffff</color>
+    <color name="base_black">#FF000000</color>
+    <color name="base_white">#FFFFFFFF</color>
+
+    <color name="purple_50">#EEE7F4</color>
+    <color name="purple_100">#D3C4E5</color>
+    <color name="purple_200">#B69ED5</color>
+    <color name="purple_300">#9A76C4</color>
+    <color name="purple_400">#8558B7</color>
+    <color name="purple_500">#713BAA</color>
+    <color name="purple_600">#6836A4</color>
+    <color name="purple_700">#5D2E9B</color>
     <color name="purple_800">#522893</color>
-    <color name="purple_900">#411c83</color>
+    <color name="purple_900">#411C83</color>
 
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
 
-    <color name="on_primary">@color/white</color>
-    <color name="on_surface">@color/white</color>
-    <color name="on_error">@color/white</color>
-    <color name="on_background">@color/white</color>
+    <color name="on_primary">@color/base_white</color>
+    <color name="on_surface">@color/base_white</color>
+    <color name="on_error">@color/base_white</color>
+    <color name="on_background">@color/base_white</color>
 
     <color name="error">#B00020</color>
 
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-
-    <color name="transparent">#00000000</color>
 </resources>

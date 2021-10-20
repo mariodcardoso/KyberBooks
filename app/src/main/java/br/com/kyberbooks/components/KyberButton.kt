@@ -44,7 +44,7 @@ class KyberButton @JvmOverloads constructor(
         when (buttonType) {
             CONTAINED -> {
                 setBackgroundResource(R.drawable.bg_kyber_contained_button)
-                setTextColor(ContextCompat.getColor(context, R.color.white))
+                setTextColor(ContextCompat.getColor(context, R.color.base_white))
             }
             OUTLINED -> {
                 setBackgroundResource(R.drawable.bg_kyber_outlined_button)
