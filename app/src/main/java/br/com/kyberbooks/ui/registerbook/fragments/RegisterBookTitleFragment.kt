@@ -8,14 +8,14 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import br.com.kyberbooks.R
-import br.com.kyberbooks.databinding.FragmentRegisterNameBinding
+import br.com.kyberbooks.databinding.FragmentRegisterTitleBinding
 import br.com.kyberbooks.ui.registerbook.viewmodel.RegisterBookViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class RegisterBookNameFragment : Fragment() {
+class RegisterBookTitleFragment : Fragment() {
 
-    private val binding by lazy { FragmentRegisterNameBinding.inflate(layoutInflater) }
+    private val binding by lazy { FragmentRegisterTitleBinding.inflate(layoutInflater) }
     private val activityViewModel: RegisterBookViewModel by activityViewModels()
 
     override fun onCreateView(

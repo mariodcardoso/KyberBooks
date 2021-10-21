@@ -12,7 +12,7 @@ data class Book(
     var pages: String = "",
     var description: String = "",
     var tag: String = "",
-    var cover: String
+    var cover: String = ""
 )
 
 data class Isbn(

@@ -17,8 +17,8 @@ class RegisterBookViewModel @Inject constructor(
 
     fun onNextButtonClick(fieldValue: String, fragmentId: String) {
         when (fragmentId) {
-            "FragmentRegisterIsbnBinding" -> book.isbn = fieldValue
-            "FragmentRegisterNameBinding" -> book.name = fieldValue
+            "FragmentRegisterIsbnBinding" -> book.isbn[0].isbn10 = fieldValue
+            "FragmentRegisterNameBinding" -> book.title = fieldValue
             "FragmentRegisterCoverBinding" -> {
                 book.cover = fieldValue
                 Log.i("MDCN", book.toString())

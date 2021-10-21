@@ -6,6 +6,7 @@
         <entry key="app/src/main/res/drawable/bg_dashboard.xml" value="0.3921875" />
         <entry key="app/src/main/res/drawable/bg_gray_radius.xml" value="0.3697916666666667" />
         <entry key="app/src/main/res/drawable/bg_gray_radius_20.xml" value="0.3921875" />
+        <entry key="app/src/main/res/drawable/bg_kyber_books.xml" value="0.3921875" />
         <entry key="app/src/main/res/drawable/bg_kyber_button_contained.xml" value="0.3697916666666667" />
         <entry key="app/src/main/res/drawable/bg_kyber_outlined_button.xml" value="0.3697916666666667" />
         <entry key="app/src/main/res/drawable/bg_round_white_stroke.xml" value="0.3921875" />
@@ -14,9 +15,10 @@
         <entry key="app/src/main/res/drawable/kyber_background.xml" value="0.3697916666666667" />
         <entry key="app/src/main/res/drawable/round_progress_bar.xml" value="0.3921875" />
         <entry key="app/src/main/res/layout/activity_book_details.xml" value="0.37604166666666666" />
-        <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/activity_register_book.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/component_input_edit_text.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/fragment_register_cover.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/fragment_register_isbn.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_register_name.xml" value="0.37604166666666666" />

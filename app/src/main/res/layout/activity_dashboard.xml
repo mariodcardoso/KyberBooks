@@ -4,15 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E7EAFE"
+    android:padding="20dp"
     tools:context=".ui.dashboard.activities.DashboardActivity">
-
-    <View
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="170dp"
-        android:background="@color/purple_700"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/ctn_user"
@@ -27,11 +20,12 @@
             android:id="@+id/img_user"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:src="@drawable/img_profile_placeholder"
             app:layout_constraintBottom_toBottomOf="@id/img_profile_border"
             app:layout_constraintLeft_toLeftOf="@id/img_profile_border"
             app:layout_constraintRight_toRightOf="@id/img_profile_border"
-            app:layout_constraintTop_toTopOf="@id/img_profile_border" />
+            app:layout_constraintTop_toTopOf="@id/img_profile_border"
+            app:srcCompat="@mipmap/ic_launcher_round"
+            tools:srcCompat="@tools:sample/avatars" />
 
         <ImageView
             android:id="@+id/img_profile_border"
@@ -84,7 +78,6 @@
             android:layout_width="80dp"
             android:layout_height="120dp"
             android:background="@color/base_black"
-            android:src="@drawable/book_cover_placeholder"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"

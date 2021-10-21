@@ -36,7 +36,7 @@ class DashboardActivity : BaseActivity() {
         }
 
         Glide.with(this@DashboardActivity)
-            .load(R.drawable.img_profile_placeholder)
+            .load(R.mipmap.ic_launcher_round)
             .apply(RequestOptions.circleCropTransform())
             .into(binding.imgUser)
     }

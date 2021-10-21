@@ -29,9 +29,10 @@ class RegisterBookIsbnFragment : Fragment() {
 
         with(binding) {
             btnNext.setOnClickListener {
-                viewModel.onNextButtonClick(edtIsbn.text.toString(), binding.javaClass.simpleName)
+                viewModel.onNextButtonClick(edtIsbn10.text.toString(), binding.javaClass.simpleName)
                 findNavController().navigate(R.id.action_registerBookIsbnFragment_to_registerBookNameFragment)
             }
+            btnBack.setOnClickListener { activity?.finish() }
         }
 
     }

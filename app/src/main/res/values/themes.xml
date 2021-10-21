@@ -12,13 +12,15 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
         <!-- Customize your theme here. -->
-
         <item name="fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/black_75</item>
+        <item name="android:windowBackground">@drawable/bg_kyber_books</item>
     </style>
 
-    <style name="radiusImageView" parent="">
+    <style name="radiusImageView">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">8dp</item>
         <item name="color">@color/base_white</item>
     </style>
+
 </resources>

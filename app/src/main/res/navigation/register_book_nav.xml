@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/registerBookNameFragment"
-        android:name="br.com.kyberbooks.ui.registerbook.fragments.RegisterBookNameFragment"
+        android:name="br.com.kyberbooks.ui.registerbook.fragments.RegisterBookTitleFragment"
         android:label="RegisterBookNameFragment" >
         <action
             android:id="@+id/action_registerBookNameFragment_to_registerBookCoverFragment"
