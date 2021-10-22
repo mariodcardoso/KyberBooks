@@ -27,6 +27,7 @@ class RegisterBookCoverFragment : Fragment() {
         ActivityResultContracts.StartActivityForResult()
     ) { result ->
         if (result.resultCode == RESULT_OK) {
+
             binding.imgBookCover.setImageURI(result.data?.data)
             bookUri = result.data?.data
         }
@@ -41,7 +42,7 @@ class RegisterBookCoverFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         with(binding) {
-            btnRegister.setOnClickListener {
+            btnNext.setOnClickListener {
                 activityViewModel.onNextButtonClick(bookUri.toString(), binding.javaClass.simpleName)
                 activityViewModel.registerBook()
             }

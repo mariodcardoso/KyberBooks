@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
-    tools:context=".ui.registerbook.fragments.RegisterBookIsbnFragment">
+    android:padding="20dp">
 
     <TextView
         android:id="@+id/txt_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="@string/register_book_title_fragment_title"
+        android:layout_marginTop="80dp"
+        android:gravity="center_horizontal"
+        android:text="@string/resgiter_book_about_book_txt_title"
         android:textColor="@color/base_white"
         android:textSize="@dimen/h4"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -20,46 +20,45 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/input_book_title"
+        android:id="@+id/ipt_pages"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/btn_next"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/txt_title">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edt_book_title"
+            android:id="@+id/edt_book_pages"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:hint="@string/register_book_title_fragment_edttitle_hint" />
+            android:hint="@string/resgiter_book_about_book_edit_pages" />
     </com.google.android.material.textfield.TextInputLayout>
-
-    <CheckBox
-        android:id="@+id/cbx_subtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="@string/register_book_title_fragment_checksubtitle_text"
-        app:layout_constraintBottom_toTopOf="@id/input_book_subtitle"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/input_book_title"
-        app:layout_constraintVertical_bias="0.2"
-        app:layout_constraintVertical_chainStyle="packed" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/input_book_subtitle"
+        android:id="@+id/ipt_synopsis"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/btn_next"
-        app:layout_constraintTop_toBottomOf="@id/cbx_subtitle">
+        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toTopOf="@id/spn_pages"
+        app:layout_constraintTop_toBottomOf="@id/ipt_pages">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edt_book_subtitle"
+            android:id="@+id/edt_synopsis"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:hint="@string/register_book_title_fragment_edtsubtitle_hint" />
+            android:layout_height="200dp"
+            android:gravity="start|top"
+            android:hint="@string/resgiter_book_about_book_edit_synopsis" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spn_pages"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/ipt_synopsis"
+        app:layout_constraintTop_toBottomOf="@id/ipt_synopsis"
+        tools:listitem="@android:layout/simple_list_item_1" />
 
     <br.com.kyberbooks.components.KyberButton
         android:id="@+id/btn_next"

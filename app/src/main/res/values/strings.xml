@@ -1,5 +1,28 @@
 <resources>
     <string name="app_name">KyberBooks</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="btn_next">Next</string>
+    <string name="btn_back">Back</string>
+
+    <!--    Register Book    -->
+    <string name="register_book_isbn_fragment_title">What is the ISBN?</string>
+    <string name="register_book_isbn_fragment_edtisbn13_hint">ISBN-13</string>
+
+    <string name="register_book_title_fragment_title">What is the title?</string>
+    <string name="register_book_title_fragment_edttitle_hint">Title</string>
+    <string name="register_book_title_fragment_checksubtitle_text">Is there subtitle?</string>
+    <string name="register_book_title_fragment_edtsubtitle_hint">Subtitle</string>
+
+    <string name="resgiter_book_cover_txt_upload">Click here to upload a book cover</string>
+
+    <string name="resgiter_book_publish_txt_title">Tell us about the publishment</string>
+    <string name="resgiter_book_publish_edit_publisher">Publisher</string>
+    <string name="resgiter_book_publish_edit_publish_date">Publish Date</string>
+    <string name="resgiter_book_publish_edit_edition">Edition</string>
+
+    <string name="resgiter_book_about_book_txt_title">Last page, what about the book?</string>
+    <string name="resgiter_book_about_book_edit_pages">How many pages?</string>
+    <string name="resgiter_book_about_book_edit_synopsis">Synopsis</string>
+    <string name="resgiter_book_about_book_edit_genres">Genre</string>
+
 </resources>

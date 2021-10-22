@@ -7,33 +7,46 @@
     android:padding="20dp"
     tools:context=".ui.registerbook.fragments.RegisterBookIsbnFragment">
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/img_book_cover"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginVertical="20dp"
-        android:background="#CCC"
+        android:layout_height="550dp"
+        android:background="@drawable/bg_box_white_20_dash"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toTopOf="@id/btn_back"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/radiusImageView" />
 
-    <Button
-        android:id="@+id/btn_register"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resgiter_book_cover_txt_upload"
+        android:textColor="@color/purple_200"
+        android:textSize="@dimen/h6"
+        app:layout_constraintBottom_toBottomOf="@id/img_book_cover"
+        app:layout_constraintLeft_toLeftOf="@id/img_book_cover"
+        app:layout_constraintRight_toRightOf="@id/img_book_cover"
+        app:layout_constraintTop_toTopOf="@id/img_book_cover" />
+
+    <br.com.kyberbooks.components.KyberButton
+        android:id="@+id/btn_next"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:text="Cadastrar"
+        android:text="@string/btn_next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/btn_back"
         app:layout_constraintRight_toRightOf="parent" />
 
-    <Button
+    <br.com.kyberbooks.components.KyberButton
         android:id="@+id/btn_back"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="5dp"
-        android:text="Voltar"
+        android:text="@string/btn_back"
+        app:buttonType="outlined"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/btn_register" />
+        app:layout_constraintRight_toLeftOf="@id/btn_next" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

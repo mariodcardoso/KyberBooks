@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
-    tools:context=".ui.registerbook.fragments.RegisterBookIsbnFragment">
+    android:padding="20dp">
 
     <TextView
         android:id="@+id/txt_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="@string/register_book_title_fragment_title"
+        android:layout_marginTop="80dp"
+        android:gravity="center_horizontal"
+        android:text="@string/resgiter_book_publish_txt_title"
         android:textColor="@color/base_white"
         android:textSize="@dimen/h4"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -20,45 +19,52 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/input_book_title"
+        android:id="@+id/input_book_publisher"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/btn_next"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginVertical="10dp"
+        app:layout_constraintBottom_toTopOf="@id/input_book_publish_date"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edt_book_title"
+            android:id="@+id/edt_book_publisher"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:hint="@string/register_book_title_fragment_edttitle_hint" />
+            android:hint="@string/resgiter_book_publish_edit_publisher" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <CheckBox
-        android:id="@+id/cbx_subtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="@string/register_book_title_fragment_checksubtitle_text"
-        app:layout_constraintBottom_toTopOf="@id/input_book_subtitle"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/input_book_title"
-        app:layout_constraintVertical_bias="0.2"
-        app:layout_constraintVertical_chainStyle="packed" />
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/input_book_subtitle"
+        android:id="@+id/input_book_publish_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/btn_next"
-        app:layout_constraintTop_toBottomOf="@id/cbx_subtitle">
+        android:layout_marginVertical="10dp"
+        app:layout_constraintBottom_toTopOf="@id/input_book_publish_edition"
+        app:layout_constraintTop_toBottomOf="@id/input_book_publisher">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edt_book_subtitle"
+            android:id="@+id/edt_book_publish_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:hint="@string/register_book_title_fragment_edtsubtitle_hint" />
+            android:hint="@string/resgiter_book_publish_edit_publish_date" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_book_publish_edition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_next"
+        app:layout_constraintTop_toBottomOf="@id/input_book_publish_date">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_book_publish_edition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:hint="@string/resgiter_book_publish_edit_edition" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <br.com.kyberbooks.components.KyberButton

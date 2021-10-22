@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import br.com.kyberbooks.domain.model.Book
+import br.com.kyberbooks.domain.model.Isbn
 import br.com.kyberbooks.domain.usecase.books.CreateBookUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -17,8 +18,8 @@ class RegisterBookViewModel @Inject constructor(
 
     fun onNextButtonClick(fieldValue: String, fragmentId: String) {
         when (fragmentId) {
-            "FragmentRegisterIsbnBinding" -> book.isbn[0].isbn10 = fieldValue
-            "FragmentRegisterNameBinding" -> book.title = fieldValue
+            "FragmentRegisterIsbnBinding" -> book.isbn.add(Isbn(fieldValue, fieldValue))
+            "FragmentRegisterTitleBinding" -> book.title = fieldValue
             "FragmentRegisterCoverBinding" -> {
                 book.cover = fieldValue
                 Log.i("MDCN", book.toString())

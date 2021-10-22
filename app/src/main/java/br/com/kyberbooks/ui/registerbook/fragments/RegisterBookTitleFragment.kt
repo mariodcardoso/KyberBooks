@@ -28,9 +28,10 @@ class RegisterBookTitleFragment : Fragment() {
 
         with(binding) {
             binding.btnNext.setOnClickListener {
-                activityViewModel.onNextButtonClick(edtBookName.text.toString(), binding.javaClass.simpleName)
+                activityViewModel.onNextButtonClick(edtBookTitle.text.toString(), binding.javaClass.simpleName)
                 findNavController().navigate(R.id.action_registerBookNameFragment_to_registerBookCoverFragment)
             }
+
         }
 
     }

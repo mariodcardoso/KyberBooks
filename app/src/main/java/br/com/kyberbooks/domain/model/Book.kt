@@ -1,7 +1,7 @@
 package br.com.kyberbooks.domain.model
 
 data class Book(
-    var isbn: List<Isbn> = emptyList(),
+    var isbn: MutableList<Isbn> = mutableListOf(Isbn("", "")),
     var title: String = "",
     var subtitle: String = "",
     var language: String = "",
