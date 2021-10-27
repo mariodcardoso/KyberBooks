@@ -23,4 +23,10 @@
         <item name="color">@color/base_white</item>
     </style>
 
+    <style name="Widget.MaterialComponents.TextInputEditText" parent="Theme.KyberBooks">
+        <item name="android:textSize">@dimen/h6</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
 </resources>

@@ -6,9 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import br.com.kyberbooks.R
 import br.com.kyberbooks.databinding.FragmentRegisterIsbnBinding
+import br.com.kyberbooks.ui.registerbook.viewmodel.RegisterBookIsbnViewModel
 import br.com.kyberbooks.ui.registerbook.viewmodel.RegisterBookViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -17,7 +19,8 @@ class RegisterBookIsbnFragment : Fragment() {
 
     private val binding by lazy { FragmentRegisterIsbnBinding.inflate(layoutInflater) }
 
-    private val viewModel: RegisterBookViewModel by activityViewModels()
+    private val fragmentViewModel: RegisterBookIsbnViewModel by viewModels()
+    private val activityViewModel: RegisterBookViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,14 +29,18 @@ class RegisterBookIsbnFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupViews()
+    }
 
+    private fun setupViews() {
         with(binding) {
             btnNext.setOnClickListener {
-                viewModel.onNextButtonClick(edtIsbn13.text.toString(), binding.javaClass.simpleName)
+                activityViewModel.onIsbnInformed(edtIsbn13.text.toString())
                 findNavController().navigate(R.id.action_registerBookIsbnFragment_to_registerBookNameFragment)
             }
-            btnBack.setOnClickListener { activity?.finish() }
-        }
 
+            btnBack.setOnClickListener { activity?.finish() }
+
+        }
     }
 }

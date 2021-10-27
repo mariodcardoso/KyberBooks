@@ -1,33 +1,32 @@
 package br.com.kyberbooks.ui.registerbook.viewmodel
 
-import android.util.Log
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import br.com.kyberbooks.base.BaseViewModel
 import br.com.kyberbooks.domain.model.Book
 import br.com.kyberbooks.domain.model.Isbn
-import br.com.kyberbooks.domain.usecase.books.CreateBookUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
-import kotlinx.coroutines.launch
 
 @HiltViewModel
-class RegisterBookViewModel @Inject constructor(
-    private val book: Book,
-    private val createBookUseCase: CreateBookUseCase,
-) : ViewModel() {
+class RegisterBookViewModel @Inject constructor() : BaseViewModel() {
 
-    fun onNextButtonClick(fieldValue: String, fragmentId: String) {
-        when (fragmentId) {
-            "FragmentRegisterIsbnBinding" -> book.isbn.add(Isbn(fieldValue, fieldValue))
-            "FragmentRegisterTitleBinding" -> book.title = fieldValue
-            "FragmentRegisterCoverBinding" -> {
-                book.cover = fieldValue
-                Log.i("MDCN", book.toString())
-            }
+    private val book = Book()
+
+    fun onIsbnInformed(isbn13: String) {
+        if (isbn13.length > 3) {
+            val isbn10 = isbn13.substring(3)
+            book.isbn.add(Isbn(isbn10, isbn13))
         }
     }
 
-    fun registerBook() {
-        viewModelScope.launch { createBookUseCase.invoke(book) }
+    fun onBookTitleInformed(title: String, subtitle: String = "") {
+        with(book) {
+            this.title = title
+            this.subtitle = subtitle
+        }
     }
+
+    fun onBookCoverUploaded(bookCoverUri: String) {
+        book.cover = bookCoverUri
+    }
+
 }

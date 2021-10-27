@@ -21,6 +21,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ipt_isbn_13"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:counterEnabled="true"
@@ -30,9 +31,9 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edt_isbn_13"
+            style="@style/Widget.MaterialComponents.TextInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:hint="@string/register_book_isbn_fragment_edtisbn13_hint"
             android:imeOptions="actionDone"
             android:inputType="number"
@@ -60,4 +61,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/btn_next" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

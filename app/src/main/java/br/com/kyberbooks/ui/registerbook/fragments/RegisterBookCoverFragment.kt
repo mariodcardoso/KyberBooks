@@ -11,6 +11,8 @@ import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
+import br.com.kyberbooks.R
 import br.com.kyberbooks.databinding.FragmentRegisterCoverBinding
 import br.com.kyberbooks.ui.registerbook.viewmodel.RegisterBookViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -27,7 +29,6 @@ class RegisterBookCoverFragment : Fragment() {
         ActivityResultContracts.StartActivityForResult()
     ) { result ->
         if (result.resultCode == RESULT_OK) {
-
             binding.imgBookCover.setImageURI(result.data?.data)
             bookUri = result.data?.data
         }
@@ -43,9 +44,11 @@ class RegisterBookCoverFragment : Fragment() {
 
         with(binding) {
             btnNext.setOnClickListener {
-                activityViewModel.onNextButtonClick(bookUri.toString(), binding.javaClass.simpleName)
-                activityViewModel.registerBook()
+                activityViewModel.onBookCoverUploaded(bookUri.toString())
+                findNavController().navigate(R.id.action_registerBookCoverFragment_to_registerBookPublisherFragment)
             }
+
+            btnBack.setOnClickListener { findNavController().popBackStack() }
 
             imgBookCover.setOnClickListener { openGallery() }
 

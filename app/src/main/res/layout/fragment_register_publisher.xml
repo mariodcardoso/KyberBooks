@@ -20,23 +20,28 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_book_publisher"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
         app:layout_constraintBottom_toTopOf="@id/input_book_publish_date"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_title"
+        app:layout_constraintVertical_bias=".3"
         app:layout_constraintVertical_chainStyle="packed">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edt_book_publisher"
+            style="@style/Widget.MaterialComponents.TextInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:hint="@string/resgiter_book_publish_edit_publisher" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_book_publish_date"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
@@ -45,6 +50,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edt_book_publish_date"
+            style="@style/Widget.MaterialComponents.TextInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
@@ -53,6 +59,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_book_publish_edition"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
@@ -61,6 +68,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edt_book_publish_edition"
+            style="@style/Widget.MaterialComponents.TextInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"

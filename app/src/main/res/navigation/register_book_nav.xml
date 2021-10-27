@@ -18,7 +18,8 @@
     <fragment
         android:id="@+id/registerBookNameFragment"
         android:name="br.com.kyberbooks.ui.registerbook.fragments.RegisterBookTitleFragment"
-        android:label="RegisterBookNameFragment" >
+        android:label="RegisterBookNameFragment"
+        tools:layout="@layout/fragment_register_title">
         <action
             android:id="@+id/action_registerBookNameFragment_to_registerBookCoverFragment"
             app:destination="@id/registerBookCoverFragment" />
@@ -27,5 +28,24 @@
     <fragment
         android:id="@+id/registerBookCoverFragment"
         android:name="br.com.kyberbooks.ui.registerbook.fragments.RegisterBookCoverFragment"
-        android:label="RegisterBookCoverFragment" />
+        android:label="RegisterBookCoverFragment"
+        tools:layout="@layout/fragment_register_cover">
+        <action
+            android:id="@+id/action_registerBookCoverFragment_to_registerBookPublisherFragment"
+            app:destination="@id/registerBookPublisherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerBookPublisherFragment"
+        android:name="br.com.kyberbooks.ui.registerbook.fragments.RegisterBookPublisherFragment"
+        android:label="RegisterBookPublisherFragment"
+        tools:layout="@layout/fragment_register_publisher" >
+        <action
+            android:id="@+id/action_registerBookPublisherFragment_to_registerBookAbout"
+            app:destination="@id/registerBookAbout" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerBookAbout"
+        tools:layout="@layout/fragment_register_book_about"
+        android:name="br.com.kyberbooks.ui.registerbook.fragments.RegisterBookAbout"
+        android:label="RegisterBookAbout" />
 </navigation>

@@ -21,6 +21,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_book_title"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@id/btn_next"
@@ -28,9 +29,9 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edt_book_title"
+            style="@style/Widget.MaterialComponents.TextInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
             android:hint="@string/register_book_title_fragment_edttitle_hint" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -38,7 +39,7 @@
         android:id="@+id/cbx_subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:buttonTint="@color/purple_700"
         android:text="@string/register_book_title_fragment_checksubtitle_text"
         app:layout_constraintBottom_toTopOf="@id/input_book_subtitle"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -48,17 +49,21 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_book_subtitle"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/btn_next"
-        app:layout_constraintTop_toBottomOf="@id/cbx_subtitle">
+        app:layout_constraintTop_toBottomOf="@id/cbx_subtitle"
+        tools:visibility="visible">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edt_book_subtitle"
+            style="@style/Widget.MaterialComponents.TextInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
             android:hint="@string/register_book_title_fragment_edtsubtitle_hint" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <br.com.kyberbooks.components.KyberButton
