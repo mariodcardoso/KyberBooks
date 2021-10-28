@@ -15,6 +15,9 @@
 
     <string name="resgiter_book_cover_txt_upload">Click here to upload a book cover</string>
 
+    <string name="register_book_author_fragment_title">Who is the author?</string>
+    <string name="register_book_author_fragment_edtauthor_hint">Author</string>
+
     <string name="resgiter_book_publish_txt_title">Tell us about the publishment</string>
     <string name="resgiter_book_publish_edit_publisher">Publisher</string>
     <string name="resgiter_book_publish_edit_publish_date">Publish Date</string>

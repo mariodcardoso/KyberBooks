@@ -31,21 +31,30 @@
         android:label="RegisterBookCoverFragment"
         tools:layout="@layout/fragment_register_cover">
         <action
-            android:id="@+id/action_registerBookCoverFragment_to_registerBookPublisherFragment"
-            app:destination="@id/registerBookPublisherFragment" />
+            android:id="@+id/action_registerBookCoverFragment_to_registerBookAuthorFragment"
+            app:destination="@id/registerBookAuthorFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerBookPublisherFragment"
         android:name="br.com.kyberbooks.ui.registerbook.fragments.RegisterBookPublisherFragment"
         android:label="RegisterBookPublisherFragment"
-        tools:layout="@layout/fragment_register_publisher" >
+        tools:layout="@layout/fragment_register_publisher">
         <action
             android:id="@+id/action_registerBookPublisherFragment_to_registerBookAbout"
             app:destination="@id/registerBookAbout" />
     </fragment>
     <fragment
         android:id="@+id/registerBookAbout"
-        tools:layout="@layout/fragment_register_book_about"
         android:name="br.com.kyberbooks.ui.registerbook.fragments.RegisterBookAbout"
-        android:label="RegisterBookAbout" />
+        android:label="RegisterBookAbout"
+        tools:layout="@layout/fragment_register_book_about" />
+    <fragment
+        android:id="@+id/registerBookAuthorFragment"
+        android:name="br.com.kyberbooks.ui.registerbook.fragments.RegisterBookAuthorFragment"
+        android:label="RegisterBookAuthorFragment"
+        tools:layout="@layout/fragment_register_author" >
+        <action
+            android:id="@+id/action_registerBookAuthorFragment_to_registerBookPublisherFragment"
+            app:destination="@id/registerBookPublisherFragment" />
+    </fragment>
 </navigation>

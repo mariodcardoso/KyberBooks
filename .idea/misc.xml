@@ -24,6 +24,7 @@
         <entry key="app/src/main/res/layout/activity_register_book.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/component_input_edit_text.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/fragment_register_about_book.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/fragment_register_author.xml" value="0.3536458333333333" />
         <entry key="app/src/main/res/layout/fragment_register_cover.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/fragment_register_isbn.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_register_name.xml" value="0.37604166666666666" />
