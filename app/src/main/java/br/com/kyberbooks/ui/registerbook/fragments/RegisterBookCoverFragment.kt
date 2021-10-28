@@ -45,7 +45,7 @@ class RegisterBookCoverFragment : Fragment() {
         with(binding) {
             btnNext.setOnClickListener {
                 activityViewModel.onBookCoverUploaded(bookUri.toString())
-                findNavController().navigate(R.id.action_registerBookCoverFragment_to_registerBookPublisherFragment)
+                findNavController().navigate(R.id.action_registerBookCoverFragment_to_registerBookAuthorFragment)
             }
 
             btnBack.setOnClickListener { findNavController().popBackStack() }

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import br.com.kyberbooks.R
 import br.com.kyberbooks.databinding.FragmentRegisterIsbnBinding
@@ -30,17 +31,28 @@ class RegisterBookIsbnFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupViews()
+        setupObservables()
     }
 
     private fun setupViews() {
         with(binding) {
             btnNext.setOnClickListener {
-                activityViewModel.onIsbnInformed(edtIsbn13.text.toString())
-                findNavController().navigate(R.id.action_registerBookIsbnFragment_to_registerBookNameFragment)
+                fragmentViewModel.onNextButtonClick(edtIsbn13.text.toString())
             }
 
             btnBack.setOnClickListener { activity?.finish() }
+        }
+    }
 
+    private fun setupObservables() {
+        with(binding) {
+            fragmentViewModel.isbnErrorLiveData.observe(viewLifecycleOwner, { isIsbnValid ->
+                if (isIsbnValid) {
+                    findNavController().navigate(R.id.action_registerBookIsbnFragment_to_registerBookNameFragment)
+                } else {
+                    edtIsbn13.error = "The ISBN informed is invalid"
+                }
+            })
         }
     }
 }
