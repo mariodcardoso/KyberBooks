@@ -45,7 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        app:layout_constraintBottom_toTopOf="@id/spn_pages"
+        app:layout_constraintBottom_toTopOf="@id/spn_genre"
         app:layout_constraintTop_toBottomOf="@id/ipt_pages"
         app:layout_constraintVertical_chainStyle="packed">
 
@@ -53,13 +53,13 @@
             android:id="@+id/edt_synopsis"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:scrollbars="vertical"
             android:gravity="start|top"
-            android:hint="@string/resgiter_book_about_book_edit_synopsis" />
+            android:hint="@string/resgiter_book_about_book_edit_synopsis"
+            android:scrollbars="vertical" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Spinner
-        android:id="@+id/spn_pages"
+        android:id="@+id/spn_genre"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -69,11 +69,11 @@
         tools:listitem="@android:layout/simple_list_item_1" />
 
     <br.com.kyberbooks.components.KyberButton
-        android:id="@+id/btn_next"
+        android:id="@+id/btn_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:text="@string/btn_next"
+        android:text="@string/btn_register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/btn_back"
         app:layout_constraintRight_toRightOf="parent" />
@@ -87,6 +87,6 @@
         app:buttonType="outlined"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/btn_next" />
+        app:layout_constraintRight_toLeftOf="@id/btn_register" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -54,7 +54,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:hint="@string/resgiter_book_publish_edit_publish_date" />
+            android:hint="@string/resgiter_book_publish_edit_publish_date"
+            android:imeOptions="actionDone"
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -72,7 +74,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:hint="@string/resgiter_book_publish_edit_edition" />
+            android:hint="@string/resgiter_book_publish_edit_edition"
+            android:imeOptions="actionDone"
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <br.com.kyberbooks.components.KyberButton

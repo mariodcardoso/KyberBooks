@@ -8,13 +8,18 @@ import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import br.com.kyberbooks.R
 import br.com.kyberbooks.databinding.FragmentRegisterCoverBinding
+import br.com.kyberbooks.ui.registerbook.viewmodel.RegisterBookCoverViewModel
 import br.com.kyberbooks.ui.registerbook.viewmodel.RegisterBookViewModel
+import br.com.kyberbooks.utils.gone
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -23,14 +28,18 @@ class RegisterBookCoverFragment : Fragment() {
     private val binding by lazy { FragmentRegisterCoverBinding.inflate(layoutInflater) }
 
     private val activityViewModel: RegisterBookViewModel by activityViewModels()
+    private val fragmentViewModel: RegisterBookCoverViewModel by viewModels()
     private var bookUri: Uri? = null
 
     private val startImageResult = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) { result ->
         if (result.resultCode == RESULT_OK) {
-            binding.imgBookCover.setImageURI(result.data?.data)
-            bookUri = result.data?.data
+            with(binding) {
+                txtClickHere.gone()
+                imgBookCover.setImageURI(result.data?.data)
+                bookUri = result.data?.data
+            }
         }
     }
 
@@ -41,18 +50,30 @@ class RegisterBookCoverFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupViews()
+        setupObservables()
+    }
 
+    private fun setupViews() {
         with(binding) {
-            btnNext.setOnClickListener {
-                activityViewModel.onBookCoverUploaded(bookUri.toString())
-                findNavController().navigate(R.id.action_registerBookCoverFragment_to_registerBookAuthorFragment)
-            }
-
+            btnNext.setOnClickListener { fragmentViewModel.onNextButtonClicked(bookUri.toString()) }
             btnBack.setOnClickListener { findNavController().popBackStack() }
 
             imgBookCover.setOnClickListener { openGallery() }
-
         }
+    }
+
+    private fun setupObservables() {
+        fragmentViewModel.isImageValidLiveData.observe(viewLifecycleOwner, Observer { isImageUriValid ->
+            if (isImageUriValid) {
+                activityViewModel.onBookCoverUploaded(bookUri.toString())
+                findNavController().navigate(R.id.action_registerBookCoverFragment_to_registerBookAuthorFragment)
+            } else {
+                Toast.makeText(context, getString(R.string.resgiter_book_cover_invalid), Toast.LENGTH_SHORT).show()
+            }
+
+
+        })
     }
 
     private fun openGallery() {
@@ -61,6 +82,5 @@ class RegisterBookCoverFragment : Fragment() {
             MediaStore.Images.Media.INTERNAL_CONTENT_URI
         )
         startImageResult.launch(intent)
-
     }
 }

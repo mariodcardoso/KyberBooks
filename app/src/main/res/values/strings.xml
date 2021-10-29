@@ -3,24 +3,29 @@
 
     <string name="btn_next">Next</string>
     <string name="btn_back">Back</string>
+    <string name="btn_register">Register</string>
 
     <!--    Register Book    -->
     <string name="register_book_isbn_fragment_title">What is the ISBN?</string>
     <string name="register_book_isbn_fragment_edtisbn13_hint">ISBN-13</string>
+    <string name="register_book_isbn_invalid">The ISBN informed is invalid</string>
 
     <string name="register_book_title_fragment_title">What is the title?</string>
     <string name="register_book_title_fragment_edttitle_hint">Title</string>
     <string name="register_book_title_fragment_checksubtitle_text">Is there subtitle?</string>
     <string name="register_book_title_fragment_edtsubtitle_hint">Subtitle</string>
+    <string name="register_book_title_invalid">The title informed is invalid</string>
 
     <string name="resgiter_book_cover_txt_upload">Click here to upload a book cover</string>
+    <string name="resgiter_book_cover_invalid">Select an image to upload</string>
 
     <string name="register_book_author_fragment_title">Who is the author?</string>
     <string name="register_book_author_fragment_edtauthor_hint">Author</string>
+    <string name="register_book_author_name_invalid">The author name informed is invalid</string>
 
     <string name="resgiter_book_publish_txt_title">Tell us about the publishment</string>
     <string name="resgiter_book_publish_edit_publisher">Publisher</string>
-    <string name="resgiter_book_publish_edit_publish_date">Publish Date</string>
+    <string name="resgiter_book_publish_edit_publish_date">Publish Year</string>
     <string name="resgiter_book_publish_edit_edition">Edition</string>
 
     <string name="resgiter_book_about_book_txt_title">Last page, what about the book?</string>

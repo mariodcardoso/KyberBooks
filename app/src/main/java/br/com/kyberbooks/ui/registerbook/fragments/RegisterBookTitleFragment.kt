@@ -35,10 +35,6 @@ class RegisterBookTitleFragment : Fragment() {
         setupObservables()
     }
 
-    private fun setupObservables() {
-
-    }
-
     private fun setupViews() {
         with(binding) {
             cbxSubtitle.setOnCheckedChangeListener { _, isChecked ->
@@ -46,11 +42,29 @@ class RegisterBookTitleFragment : Fragment() {
             }
 
             btnNext.setOnClickListener {
-                activityViewModel.onBookTitleInformed(edtBookTitle.text.toString(), edtBookSubtitle.text.toString())
-                findNavController().navigate(R.id.action_registerBookNameFragment_to_registerBookCoverFragment)
+                fragmentViewModel.onNextButtonClick(
+                    edtBookTitle.text.toString(),
+                    edtBookSubtitle.text.toString()
+                )
             }
 
             btnBack.setOnClickListener { findNavController().popBackStack() }
+        }
+    }
+
+    private fun setupObservables() {
+        with(binding) {
+            fragmentViewModel.isTitleValidLiveData.observe(viewLifecycleOwner, { isTitleValid ->
+                if (isTitleValid) {
+                    activityViewModel.onBookTitleInformed(
+                        edtBookTitle.text.toString(),
+                        edtBookSubtitle.text.toString()
+                    )
+                    findNavController().navigate(R.id.action_registerBookTitleFragment_to_registerBookCoverFragment)
+                } else {
+                    edtBookTitle.error = getString(R.string.register_book_title_invalid)
+                }
+            })
         }
     }
 

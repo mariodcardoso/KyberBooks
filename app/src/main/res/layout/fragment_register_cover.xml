@@ -17,17 +17,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/radiusImageView" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/resgiter_book_cover_txt_upload"
-        android:textColor="@color/purple_200"
-        android:textSize="@dimen/h6"
-        app:layout_constraintBottom_toBottomOf="@id/img_book_cover"
-        app:layout_constraintLeft_toLeftOf="@id/img_book_cover"
-        app:layout_constraintRight_toRightOf="@id/img_book_cover"
-        app:layout_constraintTop_toTopOf="@id/img_book_cover" />
-
     <br.com.kyberbooks.components.KyberButton
         android:id="@+id/btn_next"
         android:layout_width="0dp"
@@ -37,6 +26,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/btn_back"
         app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_click_here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resgiter_book_cover_txt_upload"
+        android:textColor="@color/purple_200"
+        android:textSize="@dimen/h6"
+        app:layout_constraintBottom_toBottomOf="@id/img_book_cover"
+        app:layout_constraintLeft_toLeftOf="@id/img_book_cover"
+        app:layout_constraintRight_toRightOf="@id/img_book_cover"
+        app:layout_constraintTop_toTopOf="@id/img_book_cover" />
 
     <br.com.kyberbooks.components.KyberButton
         android:id="@+id/btn_back"

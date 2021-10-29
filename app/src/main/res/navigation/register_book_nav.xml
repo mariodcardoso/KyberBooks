@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_register_isbn">
         <action
             android:id="@+id/action_registerBookIsbnFragment_to_registerBookNameFragment"
-            app:destination="@id/registerBookNameFragment" />
+            app:destination="@id/registerBookNameFragment"
+            app:enterAnim="@animator/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim"
+            app:popEnterAnim="@animator/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim" />
     </fragment>
 
     <fragment
@@ -21,8 +25,12 @@
         android:label="RegisterBookNameFragment"
         tools:layout="@layout/fragment_register_title">
         <action
-            android:id="@+id/action_registerBookNameFragment_to_registerBookCoverFragment"
-            app:destination="@id/registerBookCoverFragment" />
+            android:id="@+id/action_registerBookTitleFragment_to_registerBookCoverFragment"
+            app:destination="@id/registerBookCoverFragment"
+            app:enterAnim="@animator/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim"
+            app:popEnterAnim="@animator/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim" />
     </fragment>
 
     <fragment
@@ -32,7 +40,11 @@
         tools:layout="@layout/fragment_register_cover">
         <action
             android:id="@+id/action_registerBookCoverFragment_to_registerBookAuthorFragment"
-            app:destination="@id/registerBookAuthorFragment" />
+            app:destination="@id/registerBookAuthorFragment"
+            app:enterAnim="@animator/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim"
+            app:popEnterAnim="@animator/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/registerBookPublisherFragment"
@@ -41,7 +53,11 @@
         tools:layout="@layout/fragment_register_publisher">
         <action
             android:id="@+id/action_registerBookPublisherFragment_to_registerBookAbout"
-            app:destination="@id/registerBookAbout" />
+            app:destination="@id/registerBookAbout"
+            app:enterAnim="@animator/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim"
+            app:popEnterAnim="@animator/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/registerBookAbout"
@@ -52,9 +68,13 @@
         android:id="@+id/registerBookAuthorFragment"
         android:name="br.com.kyberbooks.ui.registerbook.fragments.RegisterBookAuthorFragment"
         android:label="RegisterBookAuthorFragment"
-        tools:layout="@layout/fragment_register_author" >
+        tools:layout="@layout/fragment_register_author">
         <action
             android:id="@+id/action_registerBookAuthorFragment_to_registerBookPublisherFragment"
-            app:destination="@id/registerBookPublisherFragment" />
+            app:destination="@id/registerBookPublisherFragment"
+            app:enterAnim="@animator/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim"
+            app:popEnterAnim="@animator/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim" />
     </fragment>
 </navigation>

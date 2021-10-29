@@ -10,8 +10,8 @@ data class Book(
     var publishDate: String = "",
     var edition: String = "",
     var pages: String = "",
-    var description: String = "",
-    var tag: String = "",
+    var synopsis: String = "",
+    var genre: String = "",
     var cover: String = ""
 )
 
