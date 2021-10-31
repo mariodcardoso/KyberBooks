@@ -71,8 +71,6 @@ class RegisterBookCoverFragment : Fragment() {
             } else {
                 Toast.makeText(context, getString(R.string.resgiter_book_cover_invalid), Toast.LENGTH_SHORT).show()
             }
-
-
         })
     }
 
@@ -81,6 +79,7 @@ class RegisterBookCoverFragment : Fragment() {
             Intent.ACTION_PICK,
             MediaStore.Images.Media.INTERNAL_CONTENT_URI
         )
+
         startImageResult.launch(intent)
     }
 }

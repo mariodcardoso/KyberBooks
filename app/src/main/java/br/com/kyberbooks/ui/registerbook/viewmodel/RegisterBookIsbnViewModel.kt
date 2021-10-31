@@ -29,5 +29,4 @@ class RegisterBookIsbnViewModel @Inject constructor() : BaseViewModel() {
     }
 
     private fun getIsbn10(isbn13: String) = isbn13.substring(3)
-
 }

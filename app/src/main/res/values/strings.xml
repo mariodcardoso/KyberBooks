@@ -27,6 +27,10 @@
     <string name="resgiter_book_publish_edit_publisher">Publisher</string>
     <string name="resgiter_book_publish_edit_publish_date">Publish Year</string>
     <string name="resgiter_book_publish_edit_edition">Edition</string>
+    <string name="resgiter_book_publish_edit_publisher_error">Publisher cannot be empty</string>
+    <string name="resgiter_book_publish_edit_publish_date_error">Publisher year is invalid</string>
+    <string name="resgiter_book_publish_edit_edition_error">Edition is invalid</string>
+    <string name="resgiter_book_publish_edit_language_error">Select a language</string>
 
     <string name="resgiter_book_about_book_txt_title">Last page, what about the book?</string>
     <string name="resgiter_book_about_book_edit_pages">How many pages?</string>

@@ -32,18 +32,20 @@ class RegisterBookViewModel @Inject constructor(
         book.cover = bookCoverUri
     }
 
-    fun onAuthorNameInformed(text: String) {
-        book.authors = text
+    fun onAuthorNameInformed(authorName: String) {
+        book.authors = authorName
     }
 
     fun onPublishmentInfoInformed(
         publisher: String,
         publishDate: String,
-        edition: String
+        edition: String,
+        language: String
     ) {
         book.publisher = publisher
         book.publishDate = publishDate
         book.edition = edition
+        book.language = language
     }
 
     fun onBookInfosInformed(pages: Int, synopsis: String, genre: String) {

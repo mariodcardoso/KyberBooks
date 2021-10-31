@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.SpinnerAdapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
@@ -14,7 +13,7 @@ import br.com.kyberbooks.databinding.FragmentRegisterBookAboutBinding
 import br.com.kyberbooks.ui.registerbook.viewmodel.RegisterBookAboutViewModel
 import br.com.kyberbooks.ui.registerbook.viewmodel.RegisterBookViewModel
 
-class RegisterBookAbout : Fragment() {
+class RegisterBookAboutFragment : Fragment() {
 
     private val binding by lazy { FragmentRegisterBookAboutBinding.inflate(layoutInflater) }
 
@@ -28,8 +27,6 @@ class RegisterBookAbout : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupViews()
-
-
     }
 
     private fun setupViews() {

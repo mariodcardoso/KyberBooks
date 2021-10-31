@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp">
@@ -65,7 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
-        app:layout_constraintBottom_toTopOf="@id/btn_next"
+        app:layout_constraintBottom_toTopOf="@id/spn_language"
         app:layout_constraintTop_toBottomOf="@id/input_book_publish_date">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -78,6 +79,15 @@
             android:imeOptions="actionDone"
             android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spn_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/btn_back"
+        app:layout_constraintTop_toBottomOf="@id/input_book_publish_edition"
+        android:gravity="center_horizontal"
+        tools:listitem="@android:layout/simple_list_item_1" />
 
     <br.com.kyberbooks.components.KyberButton
         android:id="@+id/btn_next"

@@ -61,7 +61,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerBookAbout"
-        android:name="br.com.kyberbooks.ui.registerbook.fragments.RegisterBookAbout"
+        android:name="br.com.kyberbooks.ui.registerbook.fragments.RegisterBookAboutFragment"
         android:label="RegisterBookAbout"
         tools:layout="@layout/fragment_register_book_about" />
     <fragment
