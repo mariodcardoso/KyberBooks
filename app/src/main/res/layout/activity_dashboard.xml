@@ -66,9 +66,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:background="@drawable/bg_white_radius_20"
-        android:elevation="10dp"
+        android:elevation="4dp"
         android:padding="20dp"
-        android:visibility="gone"
+        android:visibility="invisible"
         app:layout_constraintTop_toBottomOf="@id/ctn_user"
         tools:visibility="visible">
 
@@ -132,13 +132,21 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <br.com.kyberbooks.components.KyberProgressChartView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/btn_register_book"
+        app:layout_constraintTop_toBottomOf="@id/ctn_book_progress"
+        app:layout_constraintVertical_bias="0.2" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_register_book"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:backgroundTint="@color/purple_700"
-        android:src="@drawable/ic_menu_book"
+        android:src="@drawable/ic_baseline_menu_book_24"
+        android:tintMode="add"
         android:tint="@color/base_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

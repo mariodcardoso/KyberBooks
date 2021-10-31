@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/bg_black_radius_20.xml" value="0.3697916666666667" />
         <entry key="app/src/main/res/drawable/bg_box_white_20_dash.xml" value="0.3921875" />
         <entry key="app/src/main/res/drawable/bg_dashboard.xml" value="0.3921875" />
         <entry key="app/src/main/res/drawable/bg_gray_radius.xml" value="0.3697916666666667" />
@@ -23,6 +24,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/activity_register_book.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/component_input_edit_text.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/component_progress_chart_view.xml" value="0.3536458333333333" />
         <entry key="app/src/main/res/layout/fragment_register_about_book.xml" value="0.37604166666666666" />
         <entry key="app/src/main/res/layout/fragment_register_author.xml" value="0.3536458333333333" />
         <entry key="app/src/main/res/layout/fragment_register_book_about.xml" value="0.22794117647058823" />

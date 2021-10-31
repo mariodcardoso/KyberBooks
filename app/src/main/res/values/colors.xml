@@ -25,6 +25,8 @@
     <color name="purple_800">#522893</color>
     <color name="purple_900">#411C83</color>
 
+    <color name="bg_chart">#cfd1e0</color>
+
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
 

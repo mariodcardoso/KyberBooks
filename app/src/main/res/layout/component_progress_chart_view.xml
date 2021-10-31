@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_black_radius_20"
+    android:padding="10dp"
+    tools:background="@color/bg_chart">
+
+
+    <LinearLayout
+        android:id="@+id/ctn_progess_chips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/chart_progress">
+
+        <br.com.kyberbooks.components.KyberButton
+            android:id="@+id/btn_seven_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="7 dias"
+            android:textSize="12dp"
+            app:buttonType="outlined" />
+
+        <br.com.kyberbooks.components.KyberButton
+            android:id="@+id/btn_fifteen_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:text="15 dias"
+            android:textSize="12dp"
+            app:buttonType="outlined" />
+
+        <br.com.kyberbooks.components.KyberButton
+            android:id="@+id/btn_thirty_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="30 dias"
+            android:textSize="12dp"
+            app:buttonType="outlined" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/ctn_progess_chips">
+
+        <br.com.kyberbooks.components.KyberLineChartView
+            android:id="@+id/chart_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:id="@+id/bg_courtain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/bg_chart" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
