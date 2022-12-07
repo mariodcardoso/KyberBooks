@@ -1,4 +1,9 @@
-package br.com.kyberbooks
+package br.com.kyberbooks.base
 
-class BaseActivity {
+import androidx.appcompat.app.AppCompatActivity
+
+open class BaseActivity : AppCompatActivity() {
+
+
+
 }

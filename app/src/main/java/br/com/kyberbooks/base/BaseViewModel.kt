@@ -1,4 +1,7 @@
-package br.com.kyberbooks
+package br.com.kyberbooks.base
 
 class BaseViewModel {
+
+
+
 }
