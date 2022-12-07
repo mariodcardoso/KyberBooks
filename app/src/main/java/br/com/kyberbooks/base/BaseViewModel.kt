@@ -1,7 +1,11 @@
 package br.com.kyberbooks.base
 
-class BaseViewModel {
+import androidx.lifecycle.DefaultLifecycleObserver
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.ViewModel
 
+open class BaseViewModel : ViewModel(), DefaultLifecycleObserver {
 
 
 }
