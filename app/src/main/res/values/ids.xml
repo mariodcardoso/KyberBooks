@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="text_book_publisher_profile_title_genus" type="id" />
+    <item name="text_book_publisher_profile_title_isbn" type="id" />
+    <item name="text_book_publisher_profile_description" type="id" />
+    <item name="text_book_publisher_profile_title" type="id" />
+    <item name="img_book_publisher_profile" type="id" />
+    <item name="floating_book_publisher_profile" type="id" />
+    <item name="cardview_book_publisher_profile" type="id" />
+    <item name="card_book_publisher_profile" type="id" />
+</resources>
