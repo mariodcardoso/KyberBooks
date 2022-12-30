@@ -1,58 +1,35 @@
 package br.com.kyberbooks.dashboard.recycleview
 
-import android.database.DataSetObserver
+import android.content.Context
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView
+import br.com.kyberbooks.R
+import br.com.kyberbooks.databinding.ActivityDashboardBinding
 
-class DashboardAdapter: ListAdapter {
+class DashboardAdapter(
 
+    private val context: Context,
+    private val books: MutableList<ListBooksRegister>
 
-    override fun registerDataSetObserver(observer: DataSetObserver?) {
-        TODO("Not yet implemented")
+): RecyclerView.Adapter<DashboardAdapter.DashboardViewHolder>() {
+
+    class DashboardViewHolder(binding: ActivityDashboardBinding) : RecyclerView.ViewHolder(binding.root){
+        val recycleListBook = binding.recycleListBookRegister
     }
 
-    override fun unregisterDataSetObserver(observer: DataSetObserver?) {
-        TODO("Not yet implemented")
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DashboardViewHolder {
+       val books = ActivityDashboardBinding.inflate(LayoutInflater.from(context), parent, false)
+        return DashboardViewHolder(ActivityDashboardBinding)
     }
 
-    override fun getCount(): Int {
-        TODO("Not yet implemented")
+    override fun onBindViewHolder(holder: DashboardViewHolder, position: Int) {
+        var bookList = books [position]
+        holder.recycleListBook = books
+
+//        travei aqui, vi várias maneiras de construir e não estou acertando construção da sequência correta no código.
     }
 
-    override fun getItem(position: Int): Any {
-        TODO("Not yet implemented")
-    }
-
-    override fun getItemId(position: Int): Long {
-        TODO("Not yet implemented")
-    }
-
-    override fun hasStableIds(): Boolean {
-        TODO("Not yet implemented")
-    }
-
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        TODO("Not yet implemented")
-    }
-
-    override fun getItemViewType(position: Int): Int {
-        TODO("Not yet implemented")
-    }
-
-    override fun getViewTypeCount(): Int {
-        TODO("Not yet implemented")
-    }
-
-    override fun isEmpty(): Boolean {
-        TODO("Not yet implemented")
-    }
-
-    override fun areAllItemsEnabled(): Boolean {
-        TODO("Not yet implemented")
-    }
-
-    override fun isEnabled(position: Int): Boolean {
-        TODO("Not yet implemented")
-    }
+    override fun getItemCount(): Int = books.size
 }
