@@ -2,10 +2,8 @@ package br.com.kyberbooks.dashboard.recycleview
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import br.com.kyberbooks.R
 import br.com.kyberbooks.databinding.ActivityDashboardBinding
 
 class DashboardAdapter(
@@ -16,7 +14,7 @@ class DashboardAdapter(
 ): RecyclerView.Adapter<DashboardAdapter.DashboardViewHolder>() {
 
     class DashboardViewHolder(binding: ActivityDashboardBinding) : RecyclerView.ViewHolder(binding.root){
-        val recycleListBook = binding.recycleListBookRegister
+        var recycleListBook = binding.recycleListBookRegister
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DashboardViewHolder {

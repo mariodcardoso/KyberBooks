@@ -20,8 +20,10 @@ class DashboardActivity : BaseActivity() {
         recyclerView.adapter = DashboardAdapter()
 //      Compreender o pq inserção da classe do adapter está dando erro aqui.
 
+    }
 
-
+    private fun DashboardAdapter(): DashboardAdapter {
+        return DashboardAdapter()
 
     }
 
