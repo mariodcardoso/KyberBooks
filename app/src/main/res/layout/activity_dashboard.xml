@@ -77,5 +77,15 @@
         tools:listitem="@layout/activity_recycle_list_book_register"
         tools:ignore="MissingConstraints" />
 
+    <ListView
+        android:id="@id/card_book_details"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/activity_dashboard_list_publishing_company"
+        tools:ignore="MissingConstraints" />
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

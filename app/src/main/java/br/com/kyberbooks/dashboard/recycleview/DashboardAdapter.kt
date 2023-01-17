@@ -18,13 +18,12 @@ class DashboardAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DashboardViewHolder {
-       val books = ActivityDashboardBinding.inflate(LayoutInflater.from(context), parent, false)
-        return DashboardViewHolder(ActivityDashboardBinding)
+       val descriptionBooks = ActivityDashboardBinding.inflate(LayoutInflater.from(context), parent, false)
+        return DashboardViewHolder(descriptionBooks)
     }
 
     override fun onBindViewHolder(holder: DashboardViewHolder, position: Int) {
         var bookList = books [position]
-        holder.recycleListBook = books
 
 //        travei aqui, vi várias maneiras de construir e não estou acertando construção da sequência correta no código.
     }
