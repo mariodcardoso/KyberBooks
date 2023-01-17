@@ -45,7 +45,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_margin="10dp"
-                    android:text="Título" />
+                    android:text="Título"
+                    android:textSize="15sp"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/text_book_profile_description"
@@ -53,12 +55,14 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_margin="5dp"
-                    android:text="Descrição" />
+                    android:text="Descrição"
+                    android:textSize="15sp"
+                    tools:ignore="HardcodedText" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="130dp"
+                    android:layout_marginStart="130dp"
                     android:layout_marginTop="20dp"
                     android:gravity="center"
                     android:orientation="horizontal">
@@ -68,14 +72,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="ISBN" />
+                        android:text="ISBN"
+                        android:textSize="15sp"
+                        tools:ignore="HardcodedText" />
 
                     <TextView
                         android:id="@+id/text_book_profile_title_genus"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="Genero" />
+                        android:text="Genero"
+                        android:textSize="15sp"
+                        tools:ignore="HardcodedText" />
+
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
