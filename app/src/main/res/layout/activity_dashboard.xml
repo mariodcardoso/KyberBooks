@@ -70,4 +70,17 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_list_book_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/activity_recycle_list_book_register"
+        tools:ignore="MissingConstraints" />
+
+
+
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
