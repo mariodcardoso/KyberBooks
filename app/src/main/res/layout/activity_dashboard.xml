@@ -37,7 +37,7 @@
         app:layout_constraintBottom_toBottomOf="@id/img_profile"
         app:layout_constraintLeft_toLeftOf="@id/txt_profile_name"
         app:layout_constraintTop_toBottomOf="@id/txt_profile_name"
-        android:text="#TheMrDays" />
+        tools:text="#TheMrDays" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/card_book_details"
@@ -63,7 +63,7 @@
             android:textAlignment="center"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:text="Especialistas em Pessoas"
+            tools:text="Especialistas em Pessoas"
             android:textSize="32dp"
             app:layout_constraintLeft_toRightOf="@id/img_book_cover"
             app:layout_constraintRight_toRightOf="parent" />
