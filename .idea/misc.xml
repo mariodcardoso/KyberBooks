@@ -10,6 +10,7 @@
         <entry key="app/src/main/res/layout/activity_dashboard_list_books.xml" value="0.2942708333333333" />
         <entry key="app/src/main/res/layout/activity_dashboard_list_publishing_company.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_list_book_edit.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_list_continuation.xml" value="0.2942708333333333" />
         <entry key="app/src/main/res/layout/activity_recycle_list_book_register.xml" value="0.2953125" />
       </map>
     </option>
