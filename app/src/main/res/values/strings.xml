@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">KyberBooks</string>
     <string name="title_meus_livros">Meus livros</string>
+    <string name="adicionar">Adicionar</string>
 </resources>

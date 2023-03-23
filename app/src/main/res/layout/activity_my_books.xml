@@ -21,24 +21,27 @@
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/material_dynamic_neutral20"
+                android:layout_height="56dp"
+                android:background="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:title="@string/title_meus_livros"
-                app:titleTextColor="@color/material_dynamic_neutral60"/>
+                app:titleTextColor="@color/material_dynamic_neutral100"/>
 
-            <ImageView
-                android:id="@+id/menu_toolbar"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_menu_toolbar"
-                android:layout_marginStart="350dp"
-                app:layout_constraintTop_toTopOf="@id/toolbar"
-                app:layout_constraintStart_toStartOf="@id/toolbar"
-                app:layout_constraintEnd_toEndOf="@id/toolbar"
-                app:layout_constraintBottom_toBottomOf="@id/toolbar"/>
+                android:layout_marginTop="25dp"
+                android:layout_margin="16dp"
+                android:text="@string/adicionar"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
