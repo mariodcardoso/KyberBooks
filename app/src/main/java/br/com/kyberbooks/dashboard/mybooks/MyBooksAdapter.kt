@@ -9,9 +9,7 @@ import br.com.kyberbooks.R
 
 class MyBooksAdapter : RecyclerView.Adapter<MyBooksAdapter.MyBooksViewHolder>(){
 
-    private val myBooksItemList = mutableListOf<MyBooksItem>(
-//     falta finalizar aqui
-    )
+    private val myBooksItemList = listOf<MyBooksItem>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyBooksViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.list_my_books, parent, false)
@@ -29,7 +27,7 @@ class MyBooksAdapter : RecyclerView.Adapter<MyBooksAdapter.MyBooksViewHolder>(){
         var imageBooks: ImageView = itemview.findViewById(R.id.img_book_recycler_view)
 
         fun bind(myBooksItem: MyBooksItem){
-//            falta finalizar aqui
+//            imageBooks.
         }
     }
 }

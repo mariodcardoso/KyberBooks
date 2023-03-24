@@ -2,4 +2,7 @@
     <string name="app_name">KyberBooks</string>
     <string name="title_meus_livros">Meus livros</string>
     <string name="adicionar">Adicionar</string>
+    <string name="nome_do_livro">Nome do livro</string>
+    <string name="genus_book">GÊNERO</string>
+    <string name="description_details">Descrição do livro… Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</string>
 </resources>

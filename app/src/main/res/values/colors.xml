@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="btn_novo">#9932CC</color>
+    <color name="color_genus">#00000099</color>
 </resources>
