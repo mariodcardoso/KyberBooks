@@ -1,5 +1,6 @@
 package br.com.kyberbooks.dashboard.activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import br.com.kyberbooks.base.BaseActivity
@@ -37,6 +38,12 @@ class DashboardActivity : BaseActivity() {
                 .with(this)
                 .load(url)
                 .into(binding.imgBookCover)
+        }
+
+        binding.btnMyBooks.setOnClickListener {
+            val intent = Intent(applicationContext, MyBooksActivity::class.java)
+
+            startActivity(intent)
         }
     }
 
