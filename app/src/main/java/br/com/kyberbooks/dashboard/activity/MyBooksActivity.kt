@@ -22,10 +22,10 @@ class MyBooksActivity : BaseActivity() {
         viewModel.setupFields()
 
         viewModel.urlBookCover.observe(this){url ->
-           Glide
-               .with(this)
-               .load(url)
-               .into(binding.recyclerView)
+            Glide
+                .with(this)
+                .load(url)
+                .into(binding.recyclerView)
 
         }
     }
