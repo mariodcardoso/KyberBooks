@@ -22,12 +22,12 @@ class MyBooksAdapter : RecyclerView.Adapter<MyBooksAdapter.MyBooksViewHolder>(){
 
     override fun getItemCount(): Int = myBooksItemList.size
 
-    class MyBooksViewHolder(itemview: View) : RecyclerView.ViewHolder(itemview){
+    class MyBooksViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
-        var imageBooks: ImageView = itemview.findViewById(R.id.img_book_recycler_view)
+        var imageBooks: ImageView = itemView.findViewById(R.id.img_book_recycler_view)
 
         fun bind(myBooksItem: MyBooksItem){
-//            imageBooks.
+            imageBooks.setImageResource(myBooksItem.image)
         }
     }
 }

@@ -6,11 +6,11 @@ import br.com.kyberbooks.base.BaseViewModel
 
 class MyBooksViewModel :  BaseViewModel() {
 
-    private val _urlBookCover = MutableLiveData<String>()
-    var urlBookCover: LiveData<String> = _urlBookCover
+    private val _urlMyBooks = MutableLiveData<String>()
+    var urlMyBooks: LiveData<String> = _urlMyBooks
 
     fun setupFields() {
-        _urlBookCover.postValue("https://edit.org/images/cat/book-covers-big-2019101610.jpg")
+        _urlMyBooks.postValue("https://edit.org/images/cat/book-covers-big-2019101610.jpg")
     }
 }
 

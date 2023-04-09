@@ -51,7 +51,8 @@
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        tools:itemCount="4"
         tools:listitem="@layout/list_my_books"
-        tools:itemCount="5"/>
+        android:contentDescription="View"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
