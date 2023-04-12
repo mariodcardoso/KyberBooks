@@ -41,10 +41,8 @@ class DashboardActivity : BaseActivity() {
         }
 
         binding.btnMyBooks.setOnClickListener {
-            val intent = Intent(applicationContext, MyBooksActivity::class.java)
-            startActivity(intent)
+            val intentMyBooks = Intent(this, MyBooksActivity::class.java)
+            startActivity(intentMyBooks)
         }
     }
-
-
 }

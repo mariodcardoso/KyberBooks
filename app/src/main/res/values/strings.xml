@@ -8,5 +8,10 @@
     <string name="nome_do_livro">Nome do livro</string>
     <string name="genus_book">GÊNERO</string>
     <string name="description_details">Descrição do livro… Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</string>
+    <!-- Active Search-->
+    <string name="cancel">Cancelar</string>
+    <string name="main_books">Principais livros</string>
+    <string name="trending_books">Livros em alta</string>
+    <string name="other_options">Outras opções</string>
 
 </resources>

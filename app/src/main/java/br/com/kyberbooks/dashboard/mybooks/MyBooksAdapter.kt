@@ -6,6 +6,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.kyberbooks.R
+import br.com.kyberbooks.databinding.ActivityBookDataBinding
+import br.com.kyberbooks.databinding.ActivityMyBooksBinding
+import com.bumptech.glide.Glide
 
 class MyBooksAdapter : RecyclerView.Adapter<MyBooksAdapter.MyBooksViewHolder>(){
 
@@ -28,6 +31,8 @@ class MyBooksAdapter : RecyclerView.Adapter<MyBooksAdapter.MyBooksViewHolder>(){
 
         fun bind(myBooksItem: MyBooksItem){
             imageBooks.setImageResource(myBooksItem.image)
+
+            Glide.with(this.imageBooks).load("https://edit.org/images/cat/book-covers-big-2019101610.jpg").into(imageBooks)
+            }
         }
     }
-}
