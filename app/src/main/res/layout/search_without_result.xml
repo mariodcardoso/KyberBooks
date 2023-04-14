@@ -48,46 +48,17 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
-        android:id="@+id/txt_main_books"
-        android:layout_width="wrap_content"
+        android:id="@+id/txt_without_result"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="72dp"
-        android:text="@string/main_books"
-        android:textColor="@color/title_list"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/toolbar"
+        android:layout_marginEnd="16dp"
+        android:text="@string/without_result"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints,NotSibling" />
-
-    <TextView
-        android:id="@+id/txt_trending_books"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="241dp"
-        android:text="@string/trending_books"
-        android:textColor="@color/title_list"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/txt_main_books"
-        tools:ignore="MissingConstraints,NotSibling" />
-
-    <TextView
-        android:id="@+id/txt_other_options"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="482dp"
-        android:text="@string/other_options"
-        android:textColor="@color/title_list"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/txt_main_books"
-        tools:ignore="MissingConstraints,NotSibling" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

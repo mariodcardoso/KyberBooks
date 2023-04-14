@@ -13,5 +13,8 @@
     <string name="main_books">Principais livros</string>
     <string name="trending_books">Livros em alta</string>
     <string name="other_options">Outras opções</string>
+    <string name="consult_book">Escreva o nome do livro</string>
+    <!-- Search Without Result-->
+    <string name="without_result">Nós procuramos em todos os lugares mas não conseguimos encontrar o que você está procurando</string>
 
 </resources>
