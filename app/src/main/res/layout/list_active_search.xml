@@ -16,6 +16,18 @@
         tools:background="#00F"
         android:contentDescription="@null"/>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/ic_add_fab_background"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="@id/img_main_books"
+        app:layout_constraintStart_toStartOf="@id/img_main_books"
+        tools:ignore="MissingConstraints" />
+
     <ImageView
         android:id="@+id/img_trending_books"
         android:layout_width="122dp"

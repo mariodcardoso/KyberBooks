@@ -10,4 +10,5 @@
     <color name="btn_novo">#9932CC</color>
     <color name="color_genus">#00000099</color>
     <color name="title_list">#000000</color>
+    <color name="ic_add_fab_background">#000000</color>
 </resources>
