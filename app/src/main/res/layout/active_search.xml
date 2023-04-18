@@ -62,6 +62,17 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints,NotSibling" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_list_main"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_main_books"
+        tools:listitem="@layout/list_active_search" />
+
     <TextView
         android:id="@+id/txt_trending_books"
         android:layout_width="wrap_content"
@@ -76,6 +87,17 @@
         app:layout_constraintTop_toTopOf="@id/txt_main_books"
         tools:ignore="MissingConstraints,NotSibling" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_list_trending"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_trending_books"
+        tools:listitem="@layout/list_active_search_trending"/>
+
     <TextView
         android:id="@+id/txt_other_options"
         android:layout_width="wrap_content"
@@ -89,5 +111,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/txt_main_books"
         tools:ignore="MissingConstraints,NotSibling" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_other_options"
+        tools:listitem="@layout/list_active_search_other"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

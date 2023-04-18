@@ -6,11 +6,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <ImageView
-        android:id="@+id/img_main_books"
+        android:id="@+id/img_other_options"
         android:layout_width="122dp"
         android:layout_height="193dp"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:background="#00F"
         android:contentDescription="@null"/>
 

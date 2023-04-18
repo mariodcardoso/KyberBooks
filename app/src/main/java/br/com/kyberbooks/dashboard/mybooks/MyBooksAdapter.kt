@@ -6,8 +6,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.kyberbooks.R
-import br.com.kyberbooks.databinding.ActivityBookDataBinding
-import br.com.kyberbooks.databinding.ActivityMyBooksBinding
 import com.bumptech.glide.Glide
 
 class MyBooksAdapter : RecyclerView.Adapter<MyBooksAdapter.MyBooksViewHolder>(){
