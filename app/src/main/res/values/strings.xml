@@ -1,3 +1,20 @@
 <resources>
+    <!-- Dashboard -->
     <string name="app_name">KyberBooks</string>
+    <string name="btn_dashboard_my_books">Meus livros</string>
+    <!-- My Books-->
+    <string name="title_meus_livros">Meus livros</string>
+    <string name="adicionar">Adicionar</string>
+    <string name="nome_do_livro">Nome do livro</string>
+    <string name="genus_book">GÊNERO</string>
+    <string name="description_details">Descrição do livro… Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</string>
+    <!-- Active Search-->
+    <string name="cancel">Cancelar</string>
+    <string name="main_books">Principais livros</string>
+    <string name="trending_books">Livros em alta</string>
+    <string name="other_options">Outras opções</string>
+    <string name="consult_book">Escreva o nome do livro</string>
+    <!-- Search Without Result-->
+    <string name="without_result">Nós procuramos em todos os lugares mas não conseguimos encontrar o que você está procurando</string>
+
 </resources>
